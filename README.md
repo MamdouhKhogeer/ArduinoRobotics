@@ -21,11 +21,10 @@ int pushButton = 12;
 * i plugged it to pin 2 to see if it would change, but it performed the same with on and off. Infact, I removed the pin 2 then Ground and 5V, and it showed the same thing.
 * UPDATE, in the reading, i noticed there are some 0s like "11101111001111011100" only in the beggening then it's always 1s.
 * i copied "DigitalReadingSerial" to the motors script:
-  * ```Javascrip int pushButton = 12;``` before Void Setup
+  * ```int pushButton = 12;``` before Void Setup
   * ```Javascrip Serial.begin(9600);
-  pinMode(pushButton, INPUT);``` in Void Setup to anable pin 12 and the serial begin
+pinMode(pushButton, INPUT);``` in Void Setup to anable pin 12 and the serial begin
   * ```Javascrip int buttonState = digitalRead(pushButton);
-  // print out the state of the button:
   Serial.println(buttonState);
   delay(100);``` in Void Loope so the button can be read and then printed every 100, so i can check if the switch is on or off.
 * Unfortunatly the button is not working as expected
