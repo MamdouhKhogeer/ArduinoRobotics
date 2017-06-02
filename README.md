@@ -27,6 +27,7 @@ int pushButton = 12;
   * ```int buttonState = digitalRead(pushButton); Serial.println(buttonState); delay(100); ``` in Void Loope so the button can be read and        then printed every 100, so i can check if the switch is on or off.
 * Unfortunatly the button is not working as expected because the reading is always 1 without pushing the button.
 ### Motor
+* the script for the motor is summarized in pinModes, digitalWright and analogWright to control motor's polarity and speed.
 ```Javascript 
 void setup() {
 
@@ -62,3 +63,7 @@ void loop() {
     delay(1000);
   
 }
+```
+* i'm having an experience of sometimes the motor respond to the program and work fine, and then it doesn't respond as expected. For example, in low speed sometimes the motor work and other times not. The other thing is with spinning the other side, sometimes it respond to that and other times not.
+* i believe that there might be a problem with the circuit as when i removed the analog pin 6 the motor started to spin the other way. analog 6 anabled the motor to stop but it doesn't allow it to turn the other way.
+* i had two motors working before, but now only one is owrking.
