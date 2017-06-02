@@ -20,4 +20,5 @@ int pushButton = 12;
 * I uplaoded "DigitalReadSerial" to Arduino to check if pin 12 would work from the reader, and it worked. But it showed "1" without "0". which seemed for me that it's always on and won't turns off. Also i didn't need to push the button to turn it on.
 * i plugged it to pin 2 to see if it would change, but it performed the same with on and off. Infact, I removed the pin 2 then Ground and 5V, and it showed the same thing.
 * UPDATE, in the reading, i noticed there are some 0s like "11101111001111011100" only in the beggening then it's always 1s.
-* 
+* i copied "DigitalReadingSerial" to the motors script.
+* ```Javascrip int pushButton = 12;``` before Void Setup
