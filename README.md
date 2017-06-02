@@ -27,13 +27,9 @@ int pushButton = 12;
   * ```int buttonState = digitalRead(pushButton); Serial.println(buttonState); delay(100); ``` in Void Loope so the button can be read and        then printed every 100, so i can check if the switch is on or off.
 * Unfortunatly the button is not working as expected because the reading is always 1 without pushing the button.
 ### Motor
-```Javascript // digital pin 2 has a pushbutton attached to it, but i'm using pin 12 because
-//pin 2 is used for the motor... not sure if it would work.
-int pushButton = 12;
-
+```Javascript 
 void setup() {
-  Serial.begin(9600);
-  pinMode(pushButton, INPUT);
+
   pinMode (2, OUTPUT);
   pinMode (4, OUTPUT);
   pinMode (6, OUTPUT); // put your setup code here, to run once:
@@ -47,22 +43,22 @@ void loop() {
     digitalWrite (2, HIGH);
     digitalWrite (4, LOW);
     analogWrite (6, HIGH);
-    //digitalWrite (7, HIGH);
-    //digitalWrite (8, LOW);
-    //analogWrite (11, HIGH);
+    digitalWrite (7, HIGH);
+    digitalWrite (8, LOW);
+    analogWrite (11, HIGH);
     delay(1000);
-    //digitalWrite (6, 25);
-    //digitalWrite (11, 25);
-    //delay(2000);
+    digitalWrite (6, LOW);
+    digitalWrite (11, LOW);
+    delay(2000);
     digitalWrite (2, LOW);
     digitalWrite (4, HIGH);
     digitalWrite (6, HIGH);
-    //digitalWrite (7, LOW);
-    //digitalWrite (8, HIGH);
-    //digitalWrite (11, HIGH);
+    digitalWrite (7, LOW);
+    digitalWrite (8, HIGH);
+    digitalWrite (11, HIGH);
     delay(3000);
-    //digitalWrite (6, LOW);
-    //digitalWrite (11, LOW);
-    //delay(1000);
+    digitalWrite (6, LOW);
+    digitalWrite (11, LOW);
+    delay(1000);
   
 }
