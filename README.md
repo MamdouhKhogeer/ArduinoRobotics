@@ -1,4 +1,4 @@
-  push # ArduinoRobotics
+      push # ArduinoRobotics
 ## Homework 1- 5/23/17
 
 ## Homework 2- 5/26/17
@@ -22,7 +22,6 @@ int pushButton = 12;
 * UPDATE, in the reading, i noticed there are some 0s like "11101111001111011100" only in the beggening then it's always 1s.
 * i copied "DigitalReadingSerial" to the motors script:
   * ```int pushButton = 12;``` before Void Setup
-  * ```Javascrip Serial.begin(9600);
-pinMode(pushButton, INPUT);``` in Void Setup to anable pin 12 and the serial begin
+  * ```Javascrip Serial.begin(9600); pinMode(pushButton, INPUT);``` in Void Setup to anable pin 12 and the serial begin
   *  in Void Loope so the button can be read and then printed every 100, so i can check if the switch is on or off.
 * Unfortunatly the button is not working as expected
