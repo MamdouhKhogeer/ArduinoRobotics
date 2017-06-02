@@ -11,7 +11,6 @@ push # ArduinoRobotics
 ## Homework 4- 6/02/17
 * at first after i did the "pushButton" circut, i plugged it in pin 12 instead of 2 as 2 is already used by one of the motoros
 * the "DigitalReadSerial" says that "digital pin 2 has a pushbutton attached to it" does it mean that there is a pre-programmed pushbutton in pin 2?
-
 ```Javascript
 // digital pin 2 has a pushbutton attached to it. Give it a name:
 int pushButton = 12;
