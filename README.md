@@ -25,5 +25,6 @@ int pushButton = 12;
   * ```Serial.begin(9600); pinMode(pushButton, INPUT);``` in Void Setup to anable pin 12 and the serial begin
   * ```int buttonState = digitalRead(pushButton);
   Serial.println(buttonState);
-  delay(100); ``` in Void Loope so the button can be read and then printed every 100, so i can check if the switch is on or off.
+  delay(100); ``` 
+  in Void Loope so the button can be read and then printed every 100, so i can check if the switch is on or off.
 * Unfortunatly the button is not working as expected
