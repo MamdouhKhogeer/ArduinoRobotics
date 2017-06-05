@@ -67,3 +67,11 @@ void loop() {
 * i'm having an experience of sometimes the motor respond to the program and work fine, and then it doesn't respond as expected. For example, in low speed sometimes the motor work and other times not. The other thing is with spinning the other side, sometimes it respond to that and other times not.
 * i believe that there might be a problem with the circuit as when i removed the analog pin 6 the motor started to spin the other way. analog 6 anabled the motor to stop but it doesn't allow it to turn the other way.
 * i had two motors working before, but now only one is owrking.
+
+## Homework 5- 6/05/17
+
+* i used the same script from before with changing the motor motion sequance.
+* i tried to make a distnace function so i can return it when it's neccessary, but i couldn't figure out how to return the function in the loop.
+* i decided to include it void loop() in order for it to function.
+* i also had a problem of the place of distance script as when to read, before or after the robot move forward.
+* i had to place it in the end because of "if" and "else" statement, but that made the robot turn when it get close to an obstacle then move a little bit forward then turn again instead of turning all the way till the obstacle not there anymore.
