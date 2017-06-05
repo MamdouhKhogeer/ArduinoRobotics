@@ -72,6 +72,75 @@ void loop() {
 
 * i used the same script from before with changing the motor motion sequance.
 * i tried to make a distnace function so i can return it when it's neccessary, but i couldn't figure out how to return the function in the loop.
+`
+
 * i decided to include it void loop() in order for it to function.
 * i also had a problem of the place of distance script as when to read, before or after the robot move forward.
-* i had to place it in the end because of "if" and "else" statement, but that made the robot turn when it get close to an obstacle then move a little bit forward then turn again instead of turning all the way till the obstacle not there anymore.
+* i had to place it in the end because of "if" and "else" statement, but that made the robot turn when it get close to an obstacle then move a little bit forward then turn again instead of turning all the way till the obstacle not there anymore
+```Javascript
+void loop() {
+
+  // the digitalRead is to read the pushButton state 1=on 0=off.
+  int buttonState = digitalRead(pushButton);
+
+  // printIn is to check digitalRead outcomes every 1 milliseconds.
+  Serial.println(buttonState);
+  delay(1);
+
+  // if statement buttonState, so when the button is pushed the motor start working.
+  if (buttonState == 0) {
+    Serial.println("stop");
+    digitalWrite (6, LOW);
+    digitalWrite (11, LOW);
+  } else while (buttonState == 1) {
+
+      // the robot move forward
+      Serial.println("fORWARD");
+
+      digitalWrite (2, HIGH);
+      digitalWrite (4, LOW);
+      analogWrite (6, 255);
+      digitalWrite (7, HIGH);
+      digitalWrite (8, LOW);
+      analogWrite (11, 255);
+      delay(1000);
+
+      long duration, distance;
+
+      // Distance sensor pulse seting from Michael Shiloh file
+      digitalWrite(trigPin, LOW);
+      delayMicroseconds(2); // low for 2 microseconds
+      digitalWrite(trigPin, HIGH);
+      delayMicroseconds(10); // high for 10 microseconds
+      digitalWrite(trigPin, LOW);
+
+      duration = pulseIn(echoPin, HIGH);
+
+      distance = (duration / 2) / 29.1;
+
+      if (distance >= 200 || distance <= 0) {
+        Serial.println("Out of range; reading invalid");
+      } else {
+        Serial.print(distance);
+        Serial.println(" cm");
+      }
+
+      // when the robot is close to an obstacle withint distance X it turns around
+      // for a count of 5
+      if  (distance <= 6) {
+        for (int count = 0; count < 5; count = count + 1) {
+
+          // one motor is working and the other is stopped
+          digitalWrite (2, LOW);
+          digitalWrite (4, LOW);
+          analogWrite (6, 255);
+          digitalWrite (7, HIGH);
+          digitalWrite (8, LOW);
+          analogWrite (11, 255);
+          Serial.println("Turn Around");
+          delay(500);
+        }
+      }
+    }
+}
+```
