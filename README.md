@@ -24,7 +24,7 @@ int pushButton = 12;
 * i copied "DigitalReadingSerial" to the motors script:
   * ```int pushButton = 12;``` before Void Setup
   * ```Serial.begin(9600); pinMode(pushButton, INPUT);``` in Void Setup to anable pin 12 and the serial begin
-  * ```int buttonState = digitalRead(pushButton); Serial.println(buttonState); delay(100); ``` in Void Loope so the button can be read and        then printed every 100, so i can check if the switch is on or off.
+o  * ```int buttonState = digitalRead(pushButton); Serial.println(buttonState); delay(100); ``` in Void Loope so the button can be read and        then printed every 100, so i can check if the switch is on or off.
 * Unfortunatly the button is not working as expected because the reading is always 1 without pushing the button.
 ### Motor
 * the script for the motor is summarized in pinModes, digitalWright and analogWright to control motor's polarity and speed.
@@ -34,7 +34,7 @@ void setup() {
   pinMode (2, OUTPUT);
   pinMode (4, OUTPUT);
   pinMode (6, OUTPUT); // put your setup code here, to run once:
-  pinMode (7, OUTPUT);
+H  pinMode (7, OUTPUT);
   pinMode (8, OUTPUT);
   pinMode (11, OUTPUT);
 }
@@ -144,3 +144,42 @@ void loop() {
     }
 }
 ```
+
+## Homework 6 - 6/07/17
+
+* i opened AnalogReadSerial and copied the code from there to a new file and added the motor code to it.
+* plugged both sensor in A0 and A1, and added ``` Serial.println(" _sns1"); ``` to check if both are working.
+* i did the statement for the servo motor to follow light sensor.
+```Javascript    
+ if (sensorValue_1 > sensorValue_2) {
+      myservo.write(0);
+    } else {
+      myservo.write(180);
+    }
+```
+* Later i added the advance challange for the motor to stop in the middle if the difference between two sensors > 15.
+```Javascript
+  if (sensorValue_1 - sensorValue_2 < 15) {
+    myservo.write(90);
+    Serial.println("less than 15");
+  } else {
+    if (sensorValue_1 > sensorValue_2) {
+      myservo.write(0);
+    } else {
+      myservo.write(180);
+    }
+  }
+  ```
+  but it only read the difference between sensor_1 and sensor_2 NOT sensor_2 and sensor_1.
+  
+ * then i did this ```if (sensorValue_1 - sensorValue_2 || sensorValue_2 - sensorValue_1 < 15) {
+    myservo.write(90);
+    Serial.println("less than 15");``` and it didn't work
+* i thought this would solve the problem, but it is still reading as it's always less than 15.
+```Javascript
+  if (sensorValue_1 - sensorValue_2 < 15 || sensorValue_2 - sensorValue_1 < 15) {
+    myservo.write(90);
+    Serial.println("less than 15");
+    ```
+* i am guess that there might be a problem with the resistor as it's red (250ohm) one not the orange (10k)
+  
