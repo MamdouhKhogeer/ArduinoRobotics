@@ -181,5 +181,6 @@ void loop() {
     myservo.write(90);
     Serial.println("less than 15");
     ```
+    
 * i am guess that there might be a problem with the resistor as it's red (250ohm) one not the orange (10k)
   
