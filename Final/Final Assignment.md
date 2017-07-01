@@ -44,7 +44,7 @@
   ### 6/23
   * the day before the class i had to go and solder the VL53L0X to make it work.
   * It was the first time for me to solder headers to a microship.
-  * i plugged the sensor to Arduino and followed the Adafruit tutorial.
+  * i plugged the sensor to Arduino and followed the [Adafruit tutorial](https://learn.adafruit.com/adafruit-vl53l0x-micro-lidar-distance-sensor-breakout/pinouts?view=all).
   * the sensor didn't work, so i had to as Zoe for help.
   * She re-solder the sensor and we plugged it again to Arduino and it Worked!!
   ### 6/24
