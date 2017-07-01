@@ -14,8 +14,19 @@
   * Most of these machines use stepper motors, a CNC shield, and a ready to use code. So it seemed to me if i addapted any of them, i would be bound by its boundries.
   * Later, I found the printer that i'm using its parts for the robot.
   
-## Hardware.
-    
+## Hardware
+  ### Most of the mechanical parts are from the printer which inclueds:
+  * two DC motors for X,Y axises.
+  * Gears.
+  * structure
+  ### Other parts
+  * Arduino
+  * Breadbaord
+  * Two VL53L0X measuring Sensors.
+  * AdaFruit Motor Shield
+  
+
+  
   
   
 
