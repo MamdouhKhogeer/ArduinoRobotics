@@ -46,7 +46,17 @@
   * the sensor didn't work, so i had to as Zoe for help.
   * She re-solder the sensor and we plugged it again to Arduino and it Worked!!
   ### 6/24
-  * 
+  * Made VL53L0X sensor work with X-axis.
+  ### 6/26
+  * the VL6180X came during the weekend.
+  * during the weekend, i couldn't make the two sensors work together because both of them had the same I2C address.
+  * on monday, we had the critique and after that researched for a solution.
+  ### after 6/26
+  * in the last week i was looking for a way to make the two sensors work together at the same time.
+  * the teacher also helped me with that by submitting the question in the forum.
+  * before the last submission by two days. i got to make both of them work together through Pololu library.
+ 
+  
   
   
 
