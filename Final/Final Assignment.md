@@ -2,10 +2,12 @@
 
 ## Project Discription
   The robot is a two axis printer that prints with a pen. the robot was extracted from an HP inkjet printer with a scanner.
-  I took the printer apart to look for usefull parts inside of it. Then i found out that i could use the printer structure, motor mechanism, 
-  and wires to make the robot.
+  I took the printer apart to look for usefull parts inside of it. Then i found out that i could use the printer structure, motor mechanism, and wires to make the robot.
   
-## Easrly explorations & Research
+## Detailed Discription
+  A CNC with two horizontal axis. The x axis from the printer head. and the Y axis from the scanner. the Y axis will hold a pen that will be left up and down with a servo motor. for the x and y motors to determine their positions, they will follow cordination givin by the distance sensors for each of them.
+  
+## Early explorations & Research
   * At first, i wanted to make the two axis printer looks like an arm. I found out that the mechanism of this would be diffuclt to build as the class and the teacher agreed to that.
 ![img_0868 copy](https://github.com/MamdouhKhogeer/ArduinoRobotics/blob/master/Final/Research/590a65fe4c65ab0ffe659f8c861ea95a%5B1%5D.jpg)
 
@@ -30,7 +32,7 @@
   * Used a previous motor with sensor code.
   * Adjusted the code to make it work with IR sensor instead of the sonar sensor.
   * removed the PushBotton from the code to make it simpler.
-  * The IR sensor worked with the motor shown in the video.
+  * The IR sensor worked with the motor shown in the [video](https://github.com/MamdouhKhogeer/ArduinoRobotics/blob/master/Final/Media/MOV_3807.mp4).
   * The problem with IR sensor:
     * it reads from 10cm to 80cm (begins after half of the x axis).
     * the read between 0-10cm was different wich caused the axis to stuck.
