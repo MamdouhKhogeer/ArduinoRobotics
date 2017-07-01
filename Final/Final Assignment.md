@@ -56,8 +56,15 @@
   * the teacher also helped me with that by submitting the question in the forum.
   * before the last submission by two days. i got to make both of them work together through Pololu library.
  
-  
-  
+ ## Expectations and the work done
+ i was looking forward to control the two axises with the distance sensors to assign the motor to move to a certain range and then drop the pen. further more to link this system to another program like Grasshopper to control it further.
+ ### the work done and not done
+ * most of the mechanism is working, eventhough it is not that effeciant. the pen and the servo are not hooked to the system.
+ * i got the sensors to work togther but the coding for them to work with motors is not finished.
+ * i started to use the motor shield at the end because the wires and the H-Bridge sometimes are not working properly.Also to limit the number of wires.
+ 
+ 
+ 
   
 
   
