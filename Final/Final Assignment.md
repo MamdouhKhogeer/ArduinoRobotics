@@ -22,8 +22,32 @@
   ### Other parts
   * Arduino
   * Breadbaord
-  * Two VL53L0X measuring Sensors.
+  * Two VL53L0X measuring Sensors
   * AdaFruit Motor Shield
+
+## Working Process
+  ### 6/19
+  * Used a previous motor with sensor code.
+  * Adjusted the code to make it work with IR sensor instead of the sonar sensor.
+  * removed the PushBotton from the code to make it simpler.
+  * The IR sensor worked with the motor shown in the video.
+  * The problem with IR sensor:
+    * it reads from 10cm to 80cm (begins after half of the x axis).
+    * the read between 0-10cm was different wich caused the axis to stuck.
+    * It wasn't accurate enough, and the numbers change constantly.
+  * I found another distance sensor which is more accurate and asked the professor about it (VL53L0X) and set the order.
+  #### 6/22
+  * one VL53L0X came after class.
+  * as i couldn't work with the new sensor, i had to work with the Y-axis mechanically.
+  ### 6/23
+  * the day before the class i had to go and solder the VL53L0X to make it work.
+  * It was the first time for me to solder headers to a microship.
+  * i plugged the sensor to Arduino and followed the Adafruit tutorial.
+  * the sensor didn't work, so i had to as Zoe for help.
+  * She re-solder the sensor and we plugged it again to Arduino and it Worked!!
+  ### 6/24
+  * 
+  
   
 
   
